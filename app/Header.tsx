@@ -1,4 +1,5 @@
 import { MapPin, ChevronRight, ShoppingCart, User } from "lucide-react";
+import Link from "next/link";
 
 function Header() {
   return (
@@ -34,9 +35,12 @@ function Header() {
         <button className="w-9 h-9 flex justify-center items-center rounded-full bg-white">
           <ShoppingCart className="w-4 h-4" />
         </button>
-        <button className="w-9 h-9 flex justify-center items-center rounded-full bg-red-500">
-          <User className="w-4 h-4 text-white" />
-        </button>
+        <Link href={"/sign-up"}>
+          {" "}
+          <button className="w-9 h-9 flex justify-center items-center rounded-full bg-red-500">
+            <User className="w-4 h-4 text-white" />
+          </button>
+        </Link>
       </div>
     </div>
   );
